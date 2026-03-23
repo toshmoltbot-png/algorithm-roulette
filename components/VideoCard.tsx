@@ -41,7 +41,7 @@ export default function VideoCard({ video }: VideoCardProps) {
       mute: "1",
       loop: "1",
       playlist: id, // required for YouTube loop
-      controls: "0",
+      controls: "1",
       rel: "0",
       modestbranding: "1",
       playsinline: "1",
