@@ -1,89 +1,642 @@
 [
-  {"id":"fr1","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why Traditional Values Matter","creator":"@ConservativeVoice"},
-  {"id":"fr2","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"The Border Crisis Explained","creator":"@RightSideMedia"},
-  {"id":"fr3","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Second Amendment Rights Today","creator":"@GunOwnersMag"},
-  {"id":"fr4","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Free Market Solutions","creator":"@LibertyCast"},
-  {"id":"fr5","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Media Bias Exposed","creator":"@TruthChannel"},
-  {"id":"fr6","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Government Overreach Examples","creator":"@FreedomWatch"},
-  {"id":"fr7","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Defending Western Civilization","creator":"@CultureGuard"},
-  {"id":"fr8","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why Woke Culture Fails","creator":"@AntiWokeCast"},
-  {"id":"fr9","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Patriot Roundtable Discussion","creator":"@PatriotHQ"},
-  {"id":"fr10","category":"far-right","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Constitutional Originalism","creator":"@FoundersPod"},
-
-  {"id":"fl1","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why We Need Universal Healthcare","creator":"@ProgressiveVoice"},
-  {"id":"fl2","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Income Inequality Deep Dive","creator":"@EconLeft"},
-  {"id":"fl3","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Systemic Racism in America","creator":"@JusticeNow"},
-  {"id":"fl4","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Corporate Greed Exposed","creator":"@WorkerSolidarity"},
-  {"id":"fl5","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why Socialism Works","creator":"@LeftExplained"},
-  {"id":"fl6","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Defund the Police Movement","creator":"@AbolitionNow"},
-  {"id":"fl7","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Trans Rights Are Human Rights","creator":"@QueerLiberation"},
-  {"id":"fl8","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Billionaires Should Not Exist","creator":"@TaxTheRich"},
-  {"id":"fl9","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Union Power Rising","creator":"@LaborStrong"},
-  {"id":"fl10","category":"far-left","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Decolonize Everything","creator":"@Decolonizer"},
-
-  {"id":"fe1","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"200 Proofs Earth Is Not a Globe","creator":"@FlatEarthDave"},
-  {"id":"fe2","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"NASA Lies Compilation","creator":"@SpaceFake"},
-  {"id":"fe3","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"The Ice Wall Explained","creator":"@AntarcticTruth"},
-  {"id":"fe4","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why Stars Prove Flat Earth","creator":"@StellarSkeptic"},
-  {"id":"fe5","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Pilots Expose the Truth","creator":"@PilotTruth"},
-  {"id":"fe6","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Water Always Finds Its Level","creator":"@WaterProof"},
-  {"id":"fe7","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"The Moon Landing Hoax","creator":"@LunarLies"},
-  {"id":"fe8","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Gravity Is a Lie","creator":"@DensityNotGravity"},
-  {"id":"fe9","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Flat Earth Conference 2026","creator":"@FEConvention"},
-  {"id":"fe10","category":"flat-earth","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Ships Don't Go Over Curves","creator":"@HorizonWatch"},
-
-  {"id":"cm1","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Bitcoin to $1M is Inevitable","creator":"@BitcoinMaxi"},
-  {"id":"cm2","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Fiat Currency Is a Scam","creator":"@SoundMoney"},
-  {"id":"cm3","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why Ethereum Will Flip BTC","creator":"@ETHBull"},
-  {"id":"cm4","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"DeFi Will Replace Banks","creator":"@DeFiKing"},
-  {"id":"cm5","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"HODL Through Everything","creator":"@DiamondHands"},
-  {"id":"cm6","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Central Banks Are Dying","creator":"@EndTheFed"},
-  {"id":"cm7","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Self Custody Everything","creator":"@NotYourKeys"},
-  {"id":"cm8","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Altcoin Season Incoming","creator":"@AltSeason"},
-  {"id":"cm9","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Tokenize the World","creator":"@TokenEverything"},
-  {"id":"cm10","category":"crypto-maximalist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Proof of Work is Sacred","creator":"@MiningMatters"},
-
-  {"id":"hb1","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"My 4AM Morning Routine","creator":"@GrindsetGuru"},
-  {"id":"hb2","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"How I Made $100K Dropshipping","creator":"@EcomKing"},
-  {"id":"hb3","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why Your Friends Are Holding You Back","creator":"@SigmaMotivation"},
-  {"id":"hb4","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Passive Income Secrets","creator":"@MoneyMindset"},
-  {"id":"hb5","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Cold Plunge Changed My Life","creator":"@BiohackBro"},
-  {"id":"hb6","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Delete Social Media Now","creator":"@DigitalDetox"},
-  {"id":"hb7","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Read 100 Books a Year","creator":"@BookGrinder"},
-  {"id":"hb8","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Stoicism for Entrepreneurs","creator":"@StoicCEO"},
-  {"id":"hb9","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why I Quit My $200K Job","creator":"@QuitToWin"},
-  {"id":"hb10","category":"hustle-bro","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Discipline Equals Freedom","creator":"@IronWill"},
-
-  {"id":"tl1","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Day in My Homestead Life","creator":"@TradWife"},
-  {"id":"tl2","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Sourdough From Scratch","creator":"@HearthAndHome"},
-  {"id":"tl3","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why I Left the City Forever","creator":"@RuralRevival"},
-  {"id":"tl4","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Raising Kids Without Screens","creator":"@NaturalParent"},
-  {"id":"tl5","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Canning Season Prep","creator":"@PreserveThis"},
-  {"id":"tl6","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Traditional Marriage Works","creator":"@FaithAndFamily"},
-  {"id":"tl7","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Homeschool Our Way","creator":"@HomeschoolMom"},
-  {"id":"tl8","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Growing All Our Own Food","creator":"@FarmToTable"},
-  {"id":"tl9","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Feminine Energy Is Power","creator":"@SoftLifeQueen"},
-  {"id":"tl10","category":"trad-life","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Sunday Routine Reset","creator":"@BlessedAndBusy"},
-
-  {"id":"co1","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"What They Don't Want You to Know","creator":"@TruthSeeker"},
-  {"id":"co2","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"The Deep State Playbook","creator":"@ShadowGov"},
-  {"id":"co3","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Secret Societies Control Everything","creator":"@HiddenHand"},
-  {"id":"co4","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"MKUltra Never Ended","creator":"@MindControl"},
-  {"id":"co5","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Chemtrails: The Evidence","creator":"@SkyWatch"},
-  {"id":"co6","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"5G Towers and Your Health","creator":"@EMFAlert"},
-  {"id":"co7","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Who Really Killed JFK","creator":"@CaseReopened"},
-  {"id":"co8","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Area 51 Whistleblower","creator":"@AlienTruth"},
-  {"id":"co9","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"The Great Reset Exposed","creator":"@WEFWatch"},
-  {"id":"co10","category":"conspiracy","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Follow the Money","creator":"@MoneyTrail"},
-
-  {"id":"ca1","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"We Have 7 Years Left","creator":"@ClimateUrgency"},
-  {"id":"ca2","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Oil Companies Knew Everything","creator":"@FossilExposed"},
-  {"id":"ca3","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why I Glued Myself to a Road","creator":"@DirectAction"},
-  {"id":"ca4","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Degrowth Is the Only Way","creator":"@PostGrowth"},
-  {"id":"ca5","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Eat the Rich to Save Earth","creator":"@SystemChange"},
-  {"id":"ca6","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Nuclear Is Not Green","creator":"@RenewableOnly"},
-  {"id":"ca7","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"The Coral Reefs Are Dying","creator":"@OceanCrisis"},
-  {"id":"ca8","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Carbon Capture Is a Scam","creator":"@GreenTruth"},
-  {"id":"ca9","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Why I Stopped Flying","creator":"@FlightShame"},
-  {"id":"ca10","category":"climate-activist","platform":"youtube","embedUrl":"https://www.youtube.com/embed/dQw4w9WgXcQ","title":"Indigenous Climate Solutions","creator":"@LandBack"}
+  {
+    "id": "fr1",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/4BCrHzpWpgg",
+    "title": "Why Traditional Values Matter",
+    "creator": "@ConservativeVoice"
+  },
+  {
+    "id": "fr2",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/LblkD-7eXAE",
+    "title": "The Border Crisis Explained",
+    "creator": "@RightSideMedia"
+  },
+  {
+    "id": "fr3",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/gMRJNirIMw8",
+    "title": "Second Amendment Rights Today",
+    "creator": "@GunOwnersMag"
+  },
+  {
+    "id": "fr4",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/ElCB_vBe__U",
+    "title": "Free Market Solutions",
+    "creator": "@LibertyCast"
+  },
+  {
+    "id": "fr5",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/RFv5Fg-x3yE",
+    "title": "Media Bias Exposed",
+    "creator": "@TruthChannel"
+  },
+  {
+    "id": "fr6",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/aHeYTzhscqM",
+    "title": "Government Overreach Examples",
+    "creator": "@FreedomWatch"
+  },
+  {
+    "id": "fr7",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/dCBHJBW5Cgo",
+    "title": "Defending Western Civilization",
+    "creator": "@CultureGuard"
+  },
+  {
+    "id": "fr8",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/jj9RUw-A0m0",
+    "title": "Why Woke Culture Fails",
+    "creator": "@AntiWokeCast"
+  },
+  {
+    "id": "fr9",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/dUBk32moqxI",
+    "title": "Patriot Roundtable Discussion",
+    "creator": "@PatriotHQ"
+  },
+  {
+    "id": "fr10",
+    "category": "far-right",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/i5mbyMzqYkg",
+    "title": "Constitutional Originalism",
+    "creator": "@FoundersPod"
+  },
+  {
+    "id": "fl1",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/KcoznPCvxqM",
+    "title": "Why We Need Universal Healthcare",
+    "creator": "@ProgressiveVoice"
+  },
+  {
+    "id": "fl2",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/wCjeVRtrMRI",
+    "title": "Income Inequality Deep Dive",
+    "creator": "@EconLeft"
+  },
+  {
+    "id": "fl3",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/pwFGJRMC204",
+    "title": "Systemic Racism in America",
+    "creator": "@JusticeNow"
+  },
+  {
+    "id": "fl4",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/WlpTquU62Ho",
+    "title": "Corporate Greed Exposed",
+    "creator": "@WorkerSolidarity"
+  },
+  {
+    "id": "fl5",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/__fHTYQZS6s",
+    "title": "Why Socialism Works",
+    "creator": "@LeftExplained"
+  },
+  {
+    "id": "fl6",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/otB3WfOyf2M",
+    "title": "Defund the Police Movement",
+    "creator": "@AbolitionNow"
+  },
+  {
+    "id": "fl7",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/HcBLLV-fljs",
+    "title": "Trans Rights Are Human Rights",
+    "creator": "@QueerLiberation"
+  },
+  {
+    "id": "fl8",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/XXCsivglrGI",
+    "title": "Billionaires Should Not Exist",
+    "creator": "@TaxTheRich"
+  },
+  {
+    "id": "fl9",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/wGdTgXY47eY",
+    "title": "Union Power Rising",
+    "creator": "@LaborStrong"
+  },
+  {
+    "id": "fl10",
+    "category": "far-left",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/a5k6vcGXzlU",
+    "title": "Decolonize Everything",
+    "creator": "@Decolonizer"
+  },
+  {
+    "id": "fe1",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/fauyNm8VGrA",
+    "title": "200 Proofs Earth Is Not a Globe",
+    "creator": "@FlatEarthDave"
+  },
+  {
+    "id": "fe2",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/HIQQdoT7OHU",
+    "title": "NASA Lies Compilation",
+    "creator": "@SpaceFake"
+  },
+  {
+    "id": "fe3",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/SoBMb8HVdas",
+    "title": "The Ice Wall Explained",
+    "creator": "@AntarcticTruth"
+  },
+  {
+    "id": "fe4",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/AuuNNZJnkz4",
+    "title": "Why Stars Prove Flat Earth",
+    "creator": "@StellarSkeptic"
+  },
+  {
+    "id": "fe5",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/1l9izM0J0bs",
+    "title": "Pilots Expose the Truth",
+    "creator": "@PilotTruth"
+  },
+  {
+    "id": "fe6",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/NgsxdrmSwJQ",
+    "title": "Water Always Finds Its Level",
+    "creator": "@WaterProof"
+  },
+  {
+    "id": "fe7",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/viZcVYmxWNI",
+    "title": "The Moon Landing Hoax",
+    "creator": "@LunarLies"
+  },
+  {
+    "id": "fe8",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/DE3nPtfrD4o",
+    "title": "Gravity Is a Lie",
+    "creator": "@DensityNotGravity"
+  },
+  {
+    "id": "fe9",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/Voib-LJSB8g",
+    "title": "Flat Earth Conference 2026",
+    "creator": "@FEConvention"
+  },
+  {
+    "id": "fe10",
+    "category": "flat-earth",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/bKRUepwK5QI",
+    "title": "Ships Don't Go Over Curves",
+    "creator": "@HorizonWatch"
+  },
+  {
+    "id": "cm1",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/x6J0Kv0bDi8",
+    "title": "Bitcoin to $1M is Inevitable",
+    "creator": "@BitcoinMaxi"
+  },
+  {
+    "id": "cm2",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/LiMwX1-GFiI",
+    "title": "Fiat Currency Is a Scam",
+    "creator": "@SoundMoney"
+  },
+  {
+    "id": "cm3",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/7Q4-dvvQUVE",
+    "title": "Why Ethereum Will Flip BTC",
+    "creator": "@ETHBull"
+  },
+  {
+    "id": "cm4",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/IUJVRfBcPa0",
+    "title": "DeFi Will Replace Banks",
+    "creator": "@DeFiKing"
+  },
+  {
+    "id": "cm5",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/OqBoUkXqkYU",
+    "title": "HODL Through Everything",
+    "creator": "@DiamondHands"
+  },
+  {
+    "id": "cm6",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/o1kTC-Xkpeg",
+    "title": "Central Banks Are Dying",
+    "creator": "@EndTheFed"
+  },
+  {
+    "id": "cm7",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/EqY3RImF9XA",
+    "title": "Self Custody Everything",
+    "creator": "@NotYourKeys"
+  },
+  {
+    "id": "cm8",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/5efMTHMUlcI",
+    "title": "Altcoin Season Incoming",
+    "creator": "@AltSeason"
+  },
+  {
+    "id": "cm9",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/YXQ2Cysr3Xs",
+    "title": "Tokenize the World",
+    "creator": "@TokenEverything"
+  },
+  {
+    "id": "cm10",
+    "category": "crypto-maximalist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/TpWjuyb7tdA",
+    "title": "Proof of Work is Sacred",
+    "creator": "@MiningMatters"
+  },
+  {
+    "id": "hb1",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/Z7cliWY2VSU",
+    "title": "My 4AM Morning Routine",
+    "creator": "@GrindsetGuru"
+  },
+  {
+    "id": "hb2",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/fKlG2l_WsNc",
+    "title": "How I Made $100K Dropshipping",
+    "creator": "@EcomKing"
+  },
+  {
+    "id": "hb3",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/7AFMjhYgagg",
+    "title": "Why Your Friends Are Holding You Back",
+    "creator": "@SigmaMotivation"
+  },
+  {
+    "id": "hb4",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/gx-PnxaCFXI",
+    "title": "Passive Income Secrets",
+    "creator": "@MoneyMindset"
+  },
+  {
+    "id": "hb5",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/lRSJvwmSh_Q",
+    "title": "Cold Plunge Changed My Life",
+    "creator": "@BiohackBro"
+  },
+  {
+    "id": "hb6",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/rQaRrCONd8U",
+    "title": "Delete Social Media Now",
+    "creator": "@DigitalDetox"
+  },
+  {
+    "id": "hb7",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/4tWlkXDMrXA",
+    "title": "Read 100 Books a Year",
+    "creator": "@BookGrinder"
+  },
+  {
+    "id": "hb8",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/MS2rBz0Pfgk",
+    "title": "Stoicism for Entrepreneurs",
+    "creator": "@StoicCEO"
+  },
+  {
+    "id": "hb9",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/cDR8DyXNzJY",
+    "title": "Why I Quit My $200K Job",
+    "creator": "@QuitToWin"
+  },
+  {
+    "id": "hb10",
+    "category": "hustle-bro",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/y2Jrr3CZ3s0",
+    "title": "Discipline Equals Freedom",
+    "creator": "@IronWill"
+  },
+  {
+    "id": "tl1",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/hpcqnY1HEdQ",
+    "title": "Day in My Homestead Life",
+    "creator": "@TradWife"
+  },
+  {
+    "id": "tl2",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/LCIwMUkY6gs",
+    "title": "Sourdough From Scratch",
+    "creator": "@HearthAndHome"
+  },
+  {
+    "id": "tl3",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/t-zp5ehTxTg",
+    "title": "Why I Left the City Forever",
+    "creator": "@RuralRevival"
+  },
+  {
+    "id": "tl4",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/dTcGHj5HrQE",
+    "title": "Raising Kids Without Screens",
+    "creator": "@NaturalParent"
+  },
+  {
+    "id": "tl5",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/YCXYFOD69Gw",
+    "title": "Canning Season Prep",
+    "creator": "@PreserveThis"
+  },
+  {
+    "id": "tl6",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/FXLxyBQyU6s",
+    "title": "Traditional Marriage Works",
+    "creator": "@FaithAndFamily"
+  },
+  {
+    "id": "tl7",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/CS9tJ7voPmY",
+    "title": "Homeschool Our Way",
+    "creator": "@HomeschoolMom"
+  },
+  {
+    "id": "tl8",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/KpA1QE24Bso",
+    "title": "Growing All Our Own Food",
+    "creator": "@FarmToTable"
+  },
+  {
+    "id": "tl9",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/KExSkvQqDJ0",
+    "title": "Feminine Energy Is Power",
+    "creator": "@SoftLifeQueen"
+  },
+  {
+    "id": "tl10",
+    "category": "trad-life",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/o6LtUKD-CuI",
+    "title": "Sunday Routine Reset",
+    "creator": "@BlessedAndBusy"
+  },
+  {
+    "id": "co1",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/AwYg2dqi3F0",
+    "title": "What They Don't Want You to Know",
+    "creator": "@TruthSeeker"
+  },
+  {
+    "id": "co2",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/UtXGkY5Qt4Q",
+    "title": "The Deep State Playbook",
+    "creator": "@ShadowGov"
+  },
+  {
+    "id": "co3",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/ZvjS1WDHkIc",
+    "title": "Secret Societies Control Everything",
+    "creator": "@HiddenHand"
+  },
+  {
+    "id": "co4",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/A-BkLhKs1v4",
+    "title": "MKUltra Never Ended",
+    "creator": "@MindControl"
+  },
+  {
+    "id": "co5",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/TdtS2vHQ5G8",
+    "title": "Chemtrails: The Evidence",
+    "creator": "@SkyWatch"
+  },
+  {
+    "id": "co6",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/p4iQtGVMBKg",
+    "title": "5G Towers and Your Health",
+    "creator": "@EMFAlert"
+  },
+  {
+    "id": "co7",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/Q9JrGwyv17o",
+    "title": "Who Really Killed JFK",
+    "creator": "@CaseReopened"
+  },
+  {
+    "id": "co8",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/aXfq43JPy3Q",
+    "title": "Area 51 Whistleblower",
+    "creator": "@AlienTruth"
+  },
+  {
+    "id": "co9",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/HxI0xeOKoHc",
+    "title": "The Great Reset Exposed",
+    "creator": "@WEFWatch"
+  },
+  {
+    "id": "co10",
+    "category": "conspiracy",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/DukJS_WWFOo",
+    "title": "Follow the Money",
+    "creator": "@MoneyTrail"
+  },
+  {
+    "id": "ca1",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/zGzYzk2RdO8",
+    "title": "We Have 7 Years Left",
+    "creator": "@ClimateUrgency"
+  },
+  {
+    "id": "ca2",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/SlANOH2Zr2I",
+    "title": "Oil Companies Knew Everything",
+    "creator": "@FossilExposed"
+  },
+  {
+    "id": "ca3",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/mh0Qaj68SQM",
+    "title": "Why I Glued Myself to a Road",
+    "creator": "@DirectAction"
+  },
+  {
+    "id": "ca4",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/AXBPNeGv0Qw",
+    "title": "Degrowth Is the Only Way",
+    "creator": "@PostGrowth"
+  },
+  {
+    "id": "ca5",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/UIDU4wJ4sG0",
+    "title": "Eat the Rich to Save Earth",
+    "creator": "@SystemChange"
+  },
+  {
+    "id": "ca6",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/NStPKaEtFCs",
+    "title": "Nuclear Is Not Green",
+    "creator": "@RenewableOnly"
+  },
+  {
+    "id": "ca7",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/iRlnSMcCKSY",
+    "title": "The Coral Reefs Are Dying",
+    "creator": "@OceanCrisis"
+  },
+  {
+    "id": "ca8",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/hqbZQghshbw",
+    "title": "Carbon Capture Is a Scam",
+    "creator": "@GreenTruth"
+  },
+  {
+    "id": "ca9",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/zT5doxtpB8Q",
+    "title": "Why I Stopped Flying",
+    "creator": "@FlightShame"
+  },
+  {
+    "id": "ca10",
+    "category": "climate-activist",
+    "platform": "youtube",
+    "embedUrl": "https://www.youtube.com/embed/1Ctd0bojfmE",
+    "title": "Indigenous Climate Solutions",
+    "creator": "@LandBack"
+  }
 ]
