@@ -41,7 +41,7 @@ export default function VideoFeed({ videos }: VideoFeedProps) {
 
   // Build feed with ad placeholders every 5-7 videos
   const feedItems: (Video | "ad")[] = [];
-  let nextAdAt = 5 + Math.floor(Math.random() * 3); // 5-7
+  let nextAdAt = 5 + Math.floor(Math.random() * 3);
   let videoCount = 0;
 
   for (const video of videos) {
@@ -57,15 +57,15 @@ export default function VideoFeed({ videos }: VideoFeedProps) {
   return (
     <div
       ref={containerRef}
-      className="h-dvh overflow-y-scroll snap-y snap-mandatory no-scrollbar"
+      className="h-dvh w-full overflow-y-scroll snap-y snap-mandatory no-scrollbar"
     >
       {feedItems.map((item, index) =>
         item === "ad" ? (
-          <div key={`ad-${index}`} className="h-dvh w-full">
+          <div key={`ad-${index}`} className="h-dvh w-full snap-start snap-always">
             <AdPlaceholder />
           </div>
         ) : (
-          <div key={item.id} className="h-dvh w-full">
+          <div key={item.id} className="h-dvh w-full snap-start snap-always">
             <VideoCard video={item} />
           </div>
         )
