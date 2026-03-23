@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useCallback, useMemo } from "react";
+import { useEffect, useRef, useMemo } from "react";
 import { getCategoryById } from "@/data/categories";
 
 interface Video {
@@ -15,6 +15,7 @@ interface Video {
 interface VideoCardProps {
   video: Video;
   isActive: boolean;
+  muted: boolean;
   onEnded?: () => void;
 }
 
@@ -55,13 +56,13 @@ function ensureYouTubeAPI(cb: () => void) {
   document.head.appendChild(tag);
 }
 
-export default function VideoCard({ video, isActive, onEnded }: VideoCardProps) {
+export default function VideoCard({ video, isActive, muted, onEnded }: VideoCardProps) {
   const category = getCategoryById(video.category);
   const containerRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<any>(null);
   const videoId = useMemo(() => getYouTubeIdFromEmbedUrl(video.embedUrl), [video.embedUrl]);
 
-  // Create / destroy YouTube player
+  // Create YouTube player
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
@@ -71,7 +72,6 @@ export default function VideoCard({ video, isActive, onEnded }: VideoCardProps) 
     ensureYouTubeAPI(() => {
       if (destroyed) return;
 
-      // Create a div for the player
       const playerDiv = document.createElement("div");
       playerDiv.id = `yt-${video.id}`;
       container.appendChild(playerDiv);
@@ -80,7 +80,7 @@ export default function VideoCard({ video, isActive, onEnded }: VideoCardProps) 
         videoId,
         playerVars: {
           autoplay: isActive ? 1 : 0,
-          mute: 1,
+          mute: 1, // always start muted (browser requirement), we unmute via API
           controls: 1,
           rel: 0,
           modestbranding: 1,
@@ -89,8 +89,14 @@ export default function VideoCard({ video, isActive, onEnded }: VideoCardProps) 
           loop: 0,
         },
         events: {
+          onReady: (event: any) => {
+            // Apply current mute state once player is ready
+            if (!muted) {
+              event.target.unMute();
+              event.target.setVolume(100);
+            }
+          },
           onStateChange: (event: any) => {
-            // YT.PlayerState.ENDED === 0
             if (event.data === 0 && onEnded) {
               onEnded();
             }
@@ -123,15 +129,30 @@ export default function VideoCard({ video, isActive, onEnded }: VideoCardProps) 
     } catch {}
   }, [isActive]);
 
+  // Sync mute state
+  useEffect(() => {
+    const player = playerRef.current;
+    if (!player?.isMuted) return;
+
+    try {
+      if (muted) {
+        player.mute();
+      } else {
+        player.unMute();
+        player.setVolume(100);
+      }
+    } catch {}
+  }, [muted]);
+
   return (
     <div className="relative w-full h-full bg-black flex items-center justify-center">
-      {/* YouTube player container — fills viewport */}
+      {/* YouTube player container */}
       <div
         ref={containerRef}
         className="absolute inset-0 w-full h-full [&>iframe]:!w-full [&>iframe]:!h-full [&>div]:!w-full [&>div]:!h-full"
       />
 
-      {/* Bottom overlay: category pill + title */}
+      {/* Bottom overlay */}
       <div className="absolute bottom-0 left-0 right-0 p-5 pb-8 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none z-20">
         {category && (
           <span

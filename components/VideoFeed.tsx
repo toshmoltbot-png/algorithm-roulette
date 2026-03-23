@@ -20,6 +20,7 @@ interface VideoFeedProps {
 export default function VideoFeed({ videos }: VideoFeedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [globalMuted, setGlobalMuted] = useState(true);
 
   // Build feed with ad placeholders every 5-7 videos
   const feedItems: (Video | "ad")[] = [];
@@ -71,6 +72,8 @@ export default function VideoFeed({ videos }: VideoFeedProps) {
       } else if (e.key === "ArrowUp" || e.key === "k") {
         e.preventDefault();
         container.scrollBy({ top: -window.innerHeight, behavior: "smooth" });
+      } else if (e.key === "m") {
+        setGlobalMuted((prev) => !prev);
       }
     };
 
@@ -82,33 +85,48 @@ export default function VideoFeed({ videos }: VideoFeedProps) {
   const handleVideoEnded = useCallback((index: number) => {
     const container = containerRef.current;
     if (!container) return;
-    // Scroll to next item
     const nextEl = container.querySelector(`[data-index="${index + 1}"]`);
     if (nextEl) {
       nextEl.scrollIntoView({ behavior: "smooth" });
     }
   }, []);
 
+  const toggleMute = useCallback(() => {
+    setGlobalMuted((prev) => !prev);
+  }, []);
+
   return (
-    <div
-      ref={containerRef}
-      className="h-dvh w-full overflow-y-scroll snap-y snap-mandatory no-scrollbar"
-    >
-      {feedItems.map((item, index) =>
-        item === "ad" ? (
-          <div key={`ad-${index}`} data-index={index} className="h-dvh w-full snap-start snap-always">
-            <AdPlaceholder />
-          </div>
-        ) : (
-          <div key={item.id} data-index={index} className="h-dvh w-full snap-start snap-always">
-            <VideoCard
-              video={item}
-              isActive={index === activeIndex}
-              onEnded={() => handleVideoEnded(index)}
-            />
-          </div>
-        )
-      )}
+    <div className="relative h-dvh w-full">
+      {/* Global mute/unmute button */}
+      <button
+        onClick={toggleMute}
+        className="fixed top-14 right-4 z-50 w-10 h-10 rounded-full bg-black/60 backdrop-blur-sm border border-white/20 flex items-center justify-center text-lg hover:bg-black/80 transition-all active:scale-90"
+        aria-label={globalMuted ? "Unmute" : "Mute"}
+      >
+        {globalMuted ? "🔇" : "🔊"}
+      </button>
+
+      <div
+        ref={containerRef}
+        className="h-full w-full overflow-y-scroll snap-y snap-mandatory no-scrollbar"
+      >
+        {feedItems.map((item, index) =>
+          item === "ad" ? (
+            <div key={`ad-${index}`} data-index={index} className="h-dvh w-full snap-start snap-always">
+              <AdPlaceholder />
+            </div>
+          ) : (
+            <div key={item.id} data-index={index} className="h-dvh w-full snap-start snap-always">
+              <VideoCard
+                video={item}
+                isActive={index === activeIndex}
+                muted={globalMuted}
+                onEnded={() => handleVideoEnded(index)}
+              />
+            </div>
+          )
+        )}
+      </div>
     </div>
   );
 }
