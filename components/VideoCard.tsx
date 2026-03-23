@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useRef, useCallback, useMemo } from "react";
 import { getCategoryById } from "@/data/categories";
 
 interface Video {
@@ -14,6 +14,8 @@ interface Video {
 
 interface VideoCardProps {
   video: Video;
+  isActive: boolean;
+  onEnded?: () => void;
 }
 
 function getYouTubeIdFromEmbedUrl(embedUrl: string) {
@@ -29,47 +31,104 @@ function getYouTubeIdFromEmbedUrl(embedUrl: string) {
   }
 }
 
-export default function VideoCard({ video }: VideoCardProps) {
-  const category = getCategoryById(video.category);
-  const [loaded, setLoaded] = useState(false);
+// Ensure YouTube IFrame API is loaded once
+let apiLoaded = false;
+let apiReady = false;
+const apiCallbacks: (() => void)[] = [];
 
-  const src = useMemo(() => {
-    const id = getYouTubeIdFromEmbedUrl(video.embedUrl);
-    const params = new URLSearchParams({
-      autoplay: "1",
-      mute: "1",
-      loop: "1",
-      playlist: id,
-      controls: "1",
-      rel: "0",
-      modestbranding: "1",
-      playsinline: "1",
-      fs: "0",
+function ensureYouTubeAPI(cb: () => void) {
+  if (apiReady) { cb(); return; }
+  apiCallbacks.push(cb);
+  if (apiLoaded) return;
+  apiLoaded = true;
+
+  const prev = (window as any).onYouTubeIframeAPIReady;
+  (window as any).onYouTubeIframeAPIReady = () => {
+    apiReady = true;
+    if (prev) prev();
+    apiCallbacks.forEach((fn) => fn());
+    apiCallbacks.length = 0;
+  };
+
+  const tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.head.appendChild(tag);
+}
+
+export default function VideoCard({ video, isActive, onEnded }: VideoCardProps) {
+  const category = getCategoryById(video.category);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const playerRef = useRef<any>(null);
+  const videoId = useMemo(() => getYouTubeIdFromEmbedUrl(video.embedUrl), [video.embedUrl]);
+
+  // Create / destroy YouTube player
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    let destroyed = false;
+
+    ensureYouTubeAPI(() => {
+      if (destroyed) return;
+
+      // Create a div for the player
+      const playerDiv = document.createElement("div");
+      playerDiv.id = `yt-${video.id}`;
+      container.appendChild(playerDiv);
+
+      playerRef.current = new (window as any).YT.Player(playerDiv.id, {
+        videoId,
+        playerVars: {
+          autoplay: isActive ? 1 : 0,
+          mute: 1,
+          controls: 1,
+          rel: 0,
+          modestbranding: 1,
+          playsinline: 1,
+          fs: 0,
+          loop: 0,
+        },
+        events: {
+          onStateChange: (event: any) => {
+            // YT.PlayerState.ENDED === 0
+            if (event.data === 0 && onEnded) {
+              onEnded();
+            }
+          },
+        },
+      });
     });
-    return `${video.embedUrl}?${params.toString()}`;
-  }, [video.embedUrl]);
+
+    return () => {
+      destroyed = true;
+      if (playerRef.current?.destroy) {
+        try { playerRef.current.destroy(); } catch {}
+      }
+      playerRef.current = null;
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [videoId, video.id]);
+
+  // Play/pause based on visibility
+  useEffect(() => {
+    const player = playerRef.current;
+    if (!player?.getPlayerState) return;
+
+    try {
+      if (isActive) {
+        player.playVideo();
+      } else {
+        player.pauseVideo();
+      }
+    } catch {}
+  }, [isActive]);
 
   return (
     <div className="relative w-full h-full bg-black flex items-center justify-center">
-      {/* Loading skeleton */}
-      {!loaded && (
-        <div className="absolute inset-0 bg-zinc-900 animate-pulse z-10" aria-hidden="true">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-12 h-12 border-4 border-white/20 border-t-white/60 rounded-full animate-spin" />
-          </div>
-        </div>
-      )}
-
-      {/* YouTube iframe — fills entire viewport */}
-      <iframe
-        src={src}
-        className="absolute inset-0 w-full h-full"
-        style={{ border: "none" }}
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        title={video.title}
-        loading="lazy"
-        onLoad={() => setLoaded(true)}
+      {/* YouTube player container — fills viewport */}
+      <div
+        ref={containerRef}
+        className="absolute inset-0 w-full h-full [&>iframe]:!w-full [&>iframe]:!h-full [&>div]:!w-full [&>div]:!h-full"
       />
 
       {/* Bottom overlay: category pill + title */}

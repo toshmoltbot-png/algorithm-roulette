@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState, useCallback } from "react";
 import VideoCard from "./VideoCard";
 import AdPlaceholder from "./AdPlaceholder";
 
@@ -19,6 +19,45 @@ interface VideoFeedProps {
 
 export default function VideoFeed({ videos }: VideoFeedProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  // Build feed with ad placeholders every 5-7 videos
+  const feedItems: (Video | "ad")[] = [];
+  let nextAdAt = 5 + Math.floor(Math.random() * 3);
+  let videoCount = 0;
+
+  for (const video of videos) {
+    feedItems.push(video);
+    videoCount++;
+    if (videoCount === nextAdAt) {
+      feedItems.push("ad");
+      videoCount = 0;
+      nextAdAt = 5 + Math.floor(Math.random() * 3);
+    }
+  }
+
+  // Track which card is visible via IntersectionObserver
+  useEffect(() => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            const idx = Number(entry.target.getAttribute("data-index"));
+            if (!isNaN(idx)) setActiveIndex(idx);
+          }
+        }
+      },
+      { root: container, threshold: 0.5 }
+    );
+
+    const items = container.querySelectorAll("[data-index]");
+    items.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, [feedItems.length]);
 
   // Keyboard navigation
   useEffect(() => {
@@ -39,20 +78,16 @@ export default function VideoFeed({ videos }: VideoFeedProps) {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, []);
 
-  // Build feed with ad placeholders every 5-7 videos
-  const feedItems: (Video | "ad")[] = [];
-  let nextAdAt = 5 + Math.floor(Math.random() * 3);
-  let videoCount = 0;
-
-  for (const video of videos) {
-    feedItems.push(video);
-    videoCount++;
-    if (videoCount === nextAdAt) {
-      feedItems.push("ad");
-      videoCount = 0;
-      nextAdAt = 5 + Math.floor(Math.random() * 3);
+  // Auto-scroll to next when video ends
+  const handleVideoEnded = useCallback((index: number) => {
+    const container = containerRef.current;
+    if (!container) return;
+    // Scroll to next item
+    const nextEl = container.querySelector(`[data-index="${index + 1}"]`);
+    if (nextEl) {
+      nextEl.scrollIntoView({ behavior: "smooth" });
     }
-  }
+  }, []);
 
   return (
     <div
@@ -61,12 +96,16 @@ export default function VideoFeed({ videos }: VideoFeedProps) {
     >
       {feedItems.map((item, index) =>
         item === "ad" ? (
-          <div key={`ad-${index}`} className="h-dvh w-full snap-start snap-always">
+          <div key={`ad-${index}`} data-index={index} className="h-dvh w-full snap-start snap-always">
             <AdPlaceholder />
           </div>
         ) : (
-          <div key={item.id} className="h-dvh w-full snap-start snap-always">
-            <VideoCard video={item} />
+          <div key={item.id} data-index={index} className="h-dvh w-full snap-start snap-always">
+            <VideoCard
+              video={item}
+              isActive={index === activeIndex}
+              onEnded={() => handleVideoEnded(index)}
+            />
           </div>
         )
       )}
