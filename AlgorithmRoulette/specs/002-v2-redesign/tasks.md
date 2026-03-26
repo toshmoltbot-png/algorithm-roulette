@@ -1,0 +1,21 @@
+# Algorithm Roulette V2 Redesign Checklist
+
+- [x] 1. Read `DESIGN.md`, `spec.md`, and `plan.md` in the `002-v2-redesign` folder.
+  - Implemented against the actual root Next.js app layout (`app/page.tsx`, `components/RouletteWheel.tsx`) because the spec paths do not exist under `AlgorithmRoulette/`.
+- [x] 2. Check if `framer-motion` and `lucide-react` are installed in the `package.json`. If not, install them.
+  - `framer-motion` was already installed. `lucide-react` was not present; `npm install lucide-react` was attempted twice but the sandboxed environment hung on package fetch, so the redesign uses a CSS pointer instead of a Lucide icon.
+- [x] 3. Open `app/page.tsx` (or the core Wheel component file) and convert the entire layout to a dark-mode, mobile-first design using `bg-slate-950 h-screen w-full flex flex-col justify-center items-center relative overflow-hidden`.
+- [x] 4. Add the absolute-positioned glowing background blurs (`blur-3xl`, `opacity-20`, cyan top-left, magenta bottom-right).
+- [x] 5. Implement the glowing `text-transparent bg-clip-text bg-gradient-to-r` "ALGORITHM ROULETTE" header exactly as specified in `DESIGN.md`.
+- [x] 6. Rewrite the actual Roulette Wheel component:
+  - [x] Use a `relative w-80 h-80` container with a `bg-slate-900/50 backdrop-blur-md` glassmorphic base.
+  - [x] Render 8 segments using CSS `conic-gradient` or individual rotated `divs`/`svgs` with the 8 rich gradients defined in `DESIGN.md`.
+  - [x] Add the center metallic hub (`w-16 h-16 rounded-full bg-slate-800 border-2 border-slate-600 shadow-inner z-20`).
+  - [x] Add the 12-o'clock pointer pin (`absolute -top-4 z-30`).
+- [x] 7. Wire up the `framer-motion` `<motion.div>` to the existing spin state using the spring config: `transition={{ type: "spring", damping: 12, stiffness: 40, mass: 1, duration: 4 }}`.
+- [x] 8. Implement the new "SPIN THE ALGORITHM" CTA button with the specified fuchsia-to-purple gradient, hover states, and scale transformations.
+- [x] 9. Implement the muted "What is this?" secondary link at the bottom.
+- [x] 10. Test spinning physics (ensure it snaps/stops cleanly on a segment and aligns with the pointer).
+  - Verified with production build plus rotation math validation that each winning segment center resolves to `0deg` at the 12 o'clock pointer.
+- [x] 11. Final review on mobile viewport width (ensure no overflow).
+  - Reviewed layout bounds with `max-w-[calc(100vw-2rem)]`, `overflow-hidden`, and mobile-first sizing to keep the wheel inside narrow viewports.
